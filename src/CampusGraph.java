@@ -135,4 +135,10 @@ public class CampusGraph {
             }
         }
     }
+
+    private String normalize(String value) {
+        if (value == null) return null;
+        String trimmed = value.trim();
+        return trimmed.isEmpty() ? null : trimmed;
+    }
 }
