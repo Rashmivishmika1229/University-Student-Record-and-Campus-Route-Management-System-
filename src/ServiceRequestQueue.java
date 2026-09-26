@@ -26,4 +26,17 @@ public class ServiceRequestQueue {
         return queue.size();
     }
 
+    public void display() {
+        if (queue.isEmpty()) {
+            System.out.println("No pending service requests.");
+            return;
+        }
+
+        System.out.println("Pending Service Requests:");
+        int number = 1;
+        for (String request : queue) {
+            System.out.println(number++ + ". " + request);
+        }
+    }
+
 }    
