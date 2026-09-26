@@ -106,4 +106,33 @@ public class CampusGraph {
 
         System.out.println();
     }
+
+    public void dfs(String start) {
+        String source = normalize(start);
+
+        if (source == null || !adjacencyList.containsKey(source)) {
+            System.out.println("Starting location not found.");
+            return;
+        }
+
+        Set<String> visited = new LinkedHashSet<>();
+        System.out.print("DFS Traversal: ");
+        dfsRecursive(source, visited, true);
+        System.out.println();
+    }
+
+    private void dfsRecursive(String current, Set<String> visited, boolean first) {
+        visited.add(current);
+
+        if (!first) {
+            System.out.print(" -> ");
+        }
+        System.out.print(current);
+
+        for (String neighbour : adjacencyList.get(current)) {
+            if (!visited.contains(neighbour)) {
+                dfsRecursive(neighbour, visited, false);
+            }
+        }
+    }
 }
