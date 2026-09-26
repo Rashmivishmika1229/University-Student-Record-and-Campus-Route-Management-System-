@@ -12,4 +12,19 @@ public class CampusGraph {
         adjacencyList.put(key, new LinkedHashSet<>());
         return true;
     }
+
+    public boolean removeLocation(String location) {
+        String key = normalize(location);
+        if (key == null || !adjacencyList.containsKey(key)) {
+            return false;
+        }
+
+        adjacencyList.remove(key);
+
+        for (Set<String> neighbours : adjacencyList.values()) {
+            neighbours.remove(key);
+        }
+
+        return true;
+    }
 }
