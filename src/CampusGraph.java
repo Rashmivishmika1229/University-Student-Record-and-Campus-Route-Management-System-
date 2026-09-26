@@ -72,4 +72,38 @@ public class CampusGraph {
                     : String.join(", ", entry.getValue())));
         }
     }
+
+    public void bfs(String start) {
+        String source = normalize(start);
+
+        if (source == null || !adjacencyList.containsKey(source)) {
+            System.out.println("Starting location not found.");
+            return;
+        }
+
+        Set<String> visited = new LinkedHashSet<>();
+        Queue<String> queue = new ArrayDeque<>();
+
+        visited.add(source);
+        queue.offer(source);
+
+        System.out.print("BFS Traversal: ");
+
+        while (!queue.isEmpty()) {
+            String current = queue.poll();
+            System.out.print(current);
+
+            for (String neighbour : adjacencyList.get(current)) {
+                if (visited.add(neighbour)) {
+                    queue.offer(neighbour);
+                }
+            }
+
+            if (!queue.isEmpty()) {
+                System.out.print(" -> ");
+            }
+        }
+
+        System.out.println();
+    }
 }
