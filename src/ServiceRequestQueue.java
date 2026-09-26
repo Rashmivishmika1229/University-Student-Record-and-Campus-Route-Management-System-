@@ -18,4 +18,12 @@ public class ServiceRequestQueue {
         return queue.peek();
     }
 
+    public boolean isEmpty() {
+        return queue.isEmpty();
+    }
+
+    public int size() {
+        return queue.size();
+    }
+
 }    
