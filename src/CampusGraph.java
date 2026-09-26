@@ -57,4 +57,19 @@ public class CampusGraph {
         adjacencyList.get(b).remove(a);
         return removed;
     }
+
+    public void displayConnections() {
+        if (adjacencyList.isEmpty()) {
+            System.out.println("No campus locations found.");
+            return;
+        }
+
+        System.out.println("Campus Network:");
+        for (Map.Entry<String, Set<String>> entry : adjacencyList.entrySet()) {
+            System.out.println(entry.getKey() + " -> "
+                    + (entry.getValue().isEmpty()
+                    ? "No direct connections"
+                    : String.join(", ", entry.getValue())));
+        }
+    }
 }
