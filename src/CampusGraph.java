@@ -42,4 +42,19 @@ public class CampusGraph {
         adjacencyList.get(b).add(a);
         return true;
     }
+
+    public boolean removeConnection(String from, String to) {
+        String a = normalize(from);
+        String b = normalize(to);
+
+        if (a == null || b == null
+                || !adjacencyList.containsKey(a)
+                || !adjacencyList.containsKey(b)) {
+            return false;
+        }
+
+        boolean removed = adjacencyList.get(a).remove(b);
+        adjacencyList.get(b).remove(a);
+        return removed;
+    }
 }
