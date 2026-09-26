@@ -27,4 +27,19 @@ public class CampusGraph {
 
         return true;
     }
+
+    public boolean addConnection(String from, String to) {
+        String a = normalize(from);
+        String b = normalize(to);
+
+        if (a == null || b == null || a.equals(b)
+                || !adjacencyList.containsKey(a)
+                || !adjacencyList.containsKey(b)) {
+            return false;
+        }
+
+        adjacencyList.get(a).add(b);
+        adjacencyList.get(b).add(a);
+        return true;
+    }
 }
