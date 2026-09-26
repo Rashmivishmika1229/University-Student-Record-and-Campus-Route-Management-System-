@@ -10,5 +10,12 @@ public class ServiceRequestQueue {
         }
     }
 
-    
+    public String processNext() {
+        return queue.poll();
+    }
+
+    public String peek() {
+        return queue.peek();
+    }
+
 }    
