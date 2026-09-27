@@ -45,4 +45,19 @@ public class BST {
             }
         }
     }
+        public Student search(int studentId) {
+        Node current = root;
+
+        while (current != null) {
+            if (studentId == current.student.getStudentId()) {
+                return current.student;
+            }
+
+            current = studentId < current.student.getStudentId()
+                    ? current.left
+                    : current.right;
+        }
+
+        return null;
+    }
 }
