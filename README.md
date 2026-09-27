@@ -46,16 +46,16 @@ Alternatively, run `Main.java` using the Java extension in VS Code.
 
 | Group Member | Student ID | Assigned Responsibility | Contribution |
 |---|---|---|---|
-| K. A. S. N. Kodithuwakku | `23DA2-0327-K.A.S.N-Kodithuwakku` | BST implementation and hashing/search functionality | Implemented the BST and hash table components for organizing and searching student records. |
+| U. G. Damith | `23DA2-0075-U.G.Damith` | Linked list implementation and student-record management. | Implemented the linked list and student-record management operations. |
 | M. V. B. M. P. Senaviratna | `23DA2-0030-M.V.B.M.P.Senaviratna` | Stack and queue implementation and related operations | Implemented the stack for recent actions and the queue for student service requests. |
-| Rashmi Kodithuwakku (K. A. R. V. Kodithuwakku) | `23DA2-0370-K.A.R.V-Kodithuwakku` | Graph implementation, campus locations, connections, and BFS/DFS traversal | Implemented the campus graph using an adjacency list, including operations to add and remove locations and connections, display the network, and traverse it using BFS and DFS. |
-| U. G. Damith | `23DA2-0075-U.G.Damith` | Linked list implementation and student-record management | Implemented the linked list and student-record management operations. |
+| K. A. S. N. Kodithuwakku | `23DA2-0327-K.A.S.N-Kodithuwakku` | BST/AVL tree implementation and hashing/search functionality. | Implemented the BST and hash table components for organizing and searching student records. |
+| Rashmi Kodithuwakku (K. A. R. V. Kodithuwakku) | `23DA2-0370-K.A.R.V-Kodithuwakku` | Graph implementation, campus locations, connections, and BFS/DFS traversal. | Implemented the campus graph using an adjacency list, including operations to add and remove locations and connections, display the network, and traverse it using BFS and DFS. |
 
 All members contributed to integration, validation, documentation, GitHub collaboration, and completion of the project. K. A. S. N. Kodithuwakku and K. A. R. V. Kodithuwakku worked on integration and validation. M. V. B. M. P. Senaviratna and U. G. Damith contributed to testing and debugging.
 
 ## GitHub Collaboration
 
-The project was managed using GitHub to track development and member contributions. Each member used a separate branch to develop their assigned components and made meaningful commits to show their individual contributions. After all components were completed, the final `Main.java` was added to the main branch to integrate the complete system.
+The project was managed using GitHub to track development and member contributions. Members used separate branches and meaningful commits to develop their assigned components and support integration of the completed system.
 
 ## Demonstration
 
