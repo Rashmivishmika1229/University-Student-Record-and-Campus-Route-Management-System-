@@ -56,4 +56,26 @@ public class HashTable {
 
         return null;
     }
+
+    public boolean remove(int studentId) {
+        int index = hash(studentId);
+        Entry current = table[index];
+        Entry previous = null;
+
+        while (current != null) {
+            if (current.key == studentId) {
+                if (previous == null) {
+                    table[index] = current.next;
+                } else {
+                    previous.next = current.next;
+                }
+                return true;
+            }
+
+            previous = current;
+            current = current.next;
+        }
+
+        return false;
+    }
 }
