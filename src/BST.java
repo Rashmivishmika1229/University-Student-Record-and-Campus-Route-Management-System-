@@ -60,4 +60,21 @@ public class BST {
 
         return null;
     }
+        public void displayInOrder() {
+        if (root == null) {
+            System.out.println("BST is empty.");
+            return;
+        }
+
+        System.out.println("Students in BST (Student ID order):");
+        inOrder(root);
+    }
+
+    private void inOrder(Node node) {
+        if (node == null) return;
+
+        inOrder(node.left);
+        System.out.println(node.student);
+        inOrder(node.right);
+    }
 }
