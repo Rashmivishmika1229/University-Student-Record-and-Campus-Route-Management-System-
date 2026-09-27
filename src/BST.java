@@ -10,4 +10,39 @@ public class BST {
     }
 
     private Node root;
+
+    public boolean insert(Student student) {
+        if (student == null) {
+            return false;
+        }
+
+        if (root == null) {
+            root = new Node(student);
+            return true;
+        }
+
+        Node current = root;
+
+        while (true) {
+            int id = student.getStudentId();
+
+            if (id == current.student.getStudentId()) {
+                return false;
+            }
+
+            if (id < current.student.getStudentId()) {
+                if (current.left == null) {
+                    current.left = new Node(student);
+                    return true;
+                }
+                current = current.left;
+            } else {
+                if (current.right == null) {
+                    current.right = new Node(student);
+                    return true;
+                }
+                current = current.right;
+            }
+        }
+    }
 }
