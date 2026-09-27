@@ -42,4 +42,18 @@ public class HashTable {
         table[index] = entry;
         return true;
     }
+
+    public Student get(int studentId) {
+        int index = hash(studentId);
+        Entry current = table[index];
+
+        while (current != null) {
+            if (current.key == studentId) {
+                return current.value;
+            }
+            current = current.next;
+        }
+
+        return null;
+    }
 }
