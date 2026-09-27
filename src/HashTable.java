@@ -11,4 +11,15 @@ public class HashTable {
     }
 
     private final Entry[] table;
+
+    public HashTable(int capacity) {
+        if (capacity <= 0) {
+            throw new IllegalArgumentException("Capacity must be greater than zero.");
+        }
+        table = new Entry[capacity];
+    }
+
+    private int hash(int key) {
+        return Math.floorMod(key, table.length);
+    }
 }
